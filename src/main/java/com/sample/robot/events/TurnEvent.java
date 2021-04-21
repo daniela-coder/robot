@@ -15,7 +15,7 @@ public class TurnEvent extends Event {
         this.direction = direction;
     }
 
-    public RobotState action(RobotState currentRobotState, Grid grid) {
+    public RobotState execute(RobotState currentRobotState, Grid grid) {
         Direction currentDirection = currentRobotState.getDirection();
         Direction targetDirection = Direction.calculateDirection(currentDirection, this.direction);
         return new RobotState(currentRobotState.getPosition(), targetDirection);

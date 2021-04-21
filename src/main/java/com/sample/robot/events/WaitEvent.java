@@ -11,7 +11,7 @@ public class WaitEvent extends Event {
         super(eventName);
     }
 
-    public RobotState action(RobotState robotState, Grid grid) {
+    public RobotState execute(RobotState robotState, Grid grid) {
         return robotState;
     }
 }

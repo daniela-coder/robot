@@ -16,7 +16,7 @@ public class ForwardEvent extends Event {
         this.stepNumber = stepNumber;
     }
 
-    public RobotState action(RobotState robotState, Grid grid) {
+    public RobotState execute(RobotState robotState, Grid grid) {
         Position position = robotState.getPosition();
         Direction direction = robotState.getDirection();
         Position newPosition;

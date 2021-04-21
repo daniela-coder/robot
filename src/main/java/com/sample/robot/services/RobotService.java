@@ -22,14 +22,14 @@ public class RobotService {
 
     public List<RobotState> executeScript(String script) {
         List<Event> events = scriptParser.parseScript(script);
-       return triggerEvents(events);
+       return executeEvents(events);
     }
 
-    private List<RobotState> triggerEvents(List<Event> eventsToTrigger) {
+    private List<RobotState> executeEvents(List<Event> events) {
         List<RobotState> robotStates = new ArrayList<>();
         RobotState previousRobotState = new RobotState(null, null);
-        for (Event event: eventsToTrigger) {
-            RobotState robotState = event.action(previousRobotState, grid);
+        for (Event event: events) {
+            RobotState robotState = event.execute(previousRobotState, grid);
             robotStates.add(robotState);
             previousRobotState = robotState;
         }

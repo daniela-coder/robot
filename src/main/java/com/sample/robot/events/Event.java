@@ -11,6 +11,6 @@ public abstract class Event {
 
     EventName eventName;
 
-    public abstract RobotState action(RobotState robotState, Grid grid);
+    public abstract RobotState execute(RobotState robotState, Grid grid);
 
 }

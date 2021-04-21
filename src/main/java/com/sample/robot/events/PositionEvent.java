@@ -18,7 +18,7 @@ public class PositionEvent extends Event {
         this.direction = direction;
     }
 
-    public RobotState action(RobotState robotState, Grid grid) {
+    public RobotState execute(RobotState robotState, Grid grid) {
         return new RobotState(this.position, this.direction);
     }
 
