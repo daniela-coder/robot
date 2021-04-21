@@ -8,9 +8,10 @@ Implemented:
  * the robot controlling script parsing to build the list of Event to execute
  * movement business logic 
  * grid boundary checks
- * exception handling
+ * exception handling.
 
 
-Might be improved:
+To improve:
  * add more tests for each component 
  * extends the controller advice for other possile exception
+ * some architecture diagram of the solutioh.
