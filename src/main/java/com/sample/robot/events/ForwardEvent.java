@@ -35,6 +35,7 @@ public class ForwardEvent extends Event {
                 break;
             default:
                 newPosition = position;
+                break;
         }
         if (!fitsTheGrid(newPosition, grid)) {
             return robotState;

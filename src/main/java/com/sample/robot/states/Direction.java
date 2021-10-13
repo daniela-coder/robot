@@ -19,7 +19,7 @@ public enum Direction {
         this.absoluteValue = absoluteValue;
     }
 
-    public static Direction getDirectionFromAbsoluteValue(int absoluteValue) {
+    private static Direction getDirectionFromAbsoluteValue(int absoluteValue) {
         Stream<Direction> directionStream = Arrays.stream(Direction.values())
                 .filter(direction -> direction.absoluteValue == absoluteValue);
         return directionStream.findFirst().orElseThrow(IllegalStateException::new);

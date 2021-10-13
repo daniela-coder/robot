@@ -35,7 +35,7 @@ public class ScriptParser {
 
     private Event buildEvent(String[] line){
         Event event;
-        EventName eventName = EventName.valueOf(line[0]);
+        EventName eventName = EventName.getEventName(line[0]);
 
         switch (eventName) {
             case POSITION:

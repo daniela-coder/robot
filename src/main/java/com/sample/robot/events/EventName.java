@@ -8,5 +8,13 @@ public enum EventName {
     FORWARD,
     WAIT,
     TURNAROUND,
-    RIGHT
+    RIGHT;
+
+    public static EventName getEventName(String eventName) {
+        try {
+            EventName.valueOf(eventName);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Command not yet implemented! ");
+        }
+    }
 }
